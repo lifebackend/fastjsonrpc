@@ -1,14 +1,13 @@
-package fastjsonrpc_test
+package fastjsonrpc
 
 import (
-	"github.com/serjvanilla/fastjsonrpc"
 	"github.com/valyala/fasthttp"
 )
 
 func Example() {
-	repo := fastjsonrpc.NewRepository()
+	repo := NewRepository()
 
-	repo.Register("sum", func(ctx *fastjsonrpc.RequestCtx) {
+	repo.Register("sum", func(ctx *RequestCtx) {
 		params := ctx.Params()
 
 		a := params.GetInt("a")
@@ -16,7 +15,7 @@ func Example() {
 
 		ctx.SetResult(ctx.Arena().NewNumberInt(a + b))
 	})
-	repo.Register("sum_struct", func(ctx *fastjsonrpc.RequestCtx) {
+	repo.Register("sum_struct", func(ctx *RequestCtx) {
 		type (
 			sumRequest struct {
 				A int `json:"a"`
@@ -38,7 +37,7 @@ func Example() {
 }
 
 func ExampleErrServerError() {
-	_ = fastjsonrpc.
-		ErrServerError(fastjsonrpc.ErrorCode(-32042)).
-		WithData("something went wrong")
+	_ =
+		ErrServerError(ErrorCode(-32042)).
+			WithData("something went wrong")
 }

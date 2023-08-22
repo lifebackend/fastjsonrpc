@@ -1,4 +1,4 @@
-package fastjsonrpc_test
+package fastjsonrpc
 
 import (
 	"encoding/json"
@@ -8,8 +8,6 @@ import (
 	"github.com/valyala/fastjson"
 
 	"github.com/valyala/fasthttp"
-
-	. "github.com/serjvanilla/fastjsonrpc"
 )
 
 func specExamplesRepository(t *testing.T) *Repository {

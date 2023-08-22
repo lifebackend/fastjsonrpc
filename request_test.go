@@ -1,11 +1,10 @@
-package fastjsonrpc_test
+package fastjsonrpc
 
 import (
 	"bytes"
 	"reflect"
 	"testing"
 
-	. "github.com/serjvanilla/fastjsonrpc"
 	"github.com/valyala/fasthttp"
 )
 
