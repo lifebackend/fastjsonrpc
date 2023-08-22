@@ -1,9 +1,8 @@
-package fastjsonrpc_test
+package fastjsonrpc
 
 import (
 	"testing"
 
-	. "github.com/serjvanilla/fastjsonrpc"
 	"github.com/valyala/fasthttp"
 )
 
