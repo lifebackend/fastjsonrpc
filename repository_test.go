@@ -1,11 +1,9 @@
-package fastjsonrpc_test
+package fastjsonrpc
 
 import (
 	"testing"
 
 	"github.com/valyala/fasthttp"
-
-	. "github.com/serjvanilla/fastjsonrpc"
 )
 
 func TestRepositoryMethodPost(t *testing.T) {

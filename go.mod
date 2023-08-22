@@ -1,4 +1,4 @@
-module github.com/serjvanilla/fastjsonrpc
+module github.com/lifebackend/fastjsonrpc
 
 go 1.13
 
